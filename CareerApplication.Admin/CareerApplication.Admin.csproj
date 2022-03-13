@@ -1,0 +1,60 @@
+<Project Sdk="Microsoft.NET.Sdk.BlazorWebAssembly">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="5.0.15" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="5.0.15" PrivateAssets="all" />
+    <PackageReference Include="System.Net.Http.Json" Version="5.0.0" />
+    <PackageReference Include="MudBlazor" Version="5.2.4" />
+    <PackageReference Include="MudBlazor.ThemeManager" Version="1.0.5" />
+    <PackageReference Include="FirebaseDatabase.net" Version="4.0.7" />
+    <PackageReference Include="FirebaseAuthentication.net" Version="3.7.2" />
+    <PackageReference Include="FirebaseStorage.net" Version="1.0.3" />
+    <PackageReference Include="System.Text.Json" Version="5.0.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="MudBlazor" />
+    <None Remove="MudBlazor.ThemeManager" />
+    <None Remove="Components\" />
+    <None Remove="Layouts\" />
+    <None Remove="Services\" />
+    <None Remove="Pages\Administrator\" />
+    <None Remove="Pages\Company\" />
+    <None Remove="Themes\" />
+    <None Remove="Models\" />
+    <None Remove="FirebaseDatabase.net" />
+    <None Remove="FirebaseAuthentication.net" />
+    <None Remove="FirebaseStorage.net" />
+    <None Remove="System.Text.Json" />
+    <None Remove="Newtonsoft.Json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Components\" />
+    <Folder Include="Layouts\" />
+    <Folder Include="Services\" />
+    <Folder Include="wwwroot\css\" />
+    <Folder Include="wwwroot\js\" />
+    <Folder Include="wwwroot\fonts\" />
+    <Folder Include="wwwroot\images\" />
+    <Folder Include="Pages\Administrator\" />
+    <Folder Include="Pages\Company\" />
+    <Folder Include="Themes\" />
+    <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove="wwwroot\css\" />
+    <Content Remove="wwwroot\js\" />
+    <Content Remove="wwwroot\fonts\" />
+    <Content Remove="wwwroot\images\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CareerApplication.Core\CareerApplication.Core.csproj">
+      <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
+    </ProjectReference>
+  </ItemGroup>
+</Project>
